@@ -10,7 +10,7 @@ const AIAssistant = () => {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      content: "Hi! I'm your AI System Design Assistant. I can help you design scalable architectures, analyze your diagrams, and provide recommendations. How can I help you today?",
+      content: "Hi! I'm your AI System Design Assistant. I know all 66 components in this builder across 9 categories (Compute, Storage, Network, Messaging, Monitoring, Security, Client, Services, AI/ML, Data Processing). I can help you design scalable architectures, analyze your diagrams, and recommend specific components. What would you like to build?",
     },
   ]);
   const [input, setInput] = useState("");
@@ -98,9 +98,9 @@ const AIAssistant = () => {
 
   const quickActions = [
     { label: "Analyze my design", action: handleAnalyze },
-    { label: "How to scale?", action: () => setInput("How can I scale this system?") },
-    { label: "Security tips", action: () => setInput("What security measures should I add?") },
-    { label: "Best practices", action: () => setInput("What are the best practices for this architecture?") },
+    { label: "List all components", action: () => setInput("What components are available in each category?") },
+    { label: "Design ML system", action: () => setInput("Design a scalable ML inference system") },
+    { label: "Best practices", action: () => setInput("Best practices for this architecture?") },
   ];
 
   return (
