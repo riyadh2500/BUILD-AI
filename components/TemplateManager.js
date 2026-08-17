@@ -35,9 +35,18 @@ const TemplateManager = () => {
   });
 
   const applyTemplate = (template) => {
-    const newNodes = template.nodes.map((node) => {
+    console.log('Applying template:', template.name);
+    console.log('Template nodes:', template.nodes);
+    
+    const newNodes = template.nodes.map((node, index) => {
       const nodeType = nodeTypes[node.type];
-      return {
+      
+      if (!nodeType) {
+        console.error(`Node type "${node.type}" not found in nodeTypes`);
+        return null;
+      }
+      
+      const newNode = {
         id: uuidv4(),
         type: "custom",
         position: node.position,
@@ -47,7 +56,12 @@ const TemplateManager = () => {
           properties: {},
         },
       };
-    });
+      
+      console.log(`Created node ${index}:`, newNode);
+      return newNode;
+    }).filter(Boolean); // Remove any null nodes
+
+    console.log('Total nodes created:', newNodes.length);
 
     const newProject = {
       id: uuidv4(),
@@ -59,9 +73,14 @@ const TemplateManager = () => {
       updatedAt: new Date().toISOString(),
     };
 
+    console.log('Creating project:', newProject);
     createProject(newProject);
+    
+    console.log('Setting nodes to canvas:', newNodes.length);
     setNodes(newNodes);
     setEdges([]);
+    
+    console.log('Closing template manager');
     toggleTemplateManager();
   };
 

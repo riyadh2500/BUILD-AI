@@ -34,15 +34,16 @@ const FlowCanvas = () => {
   // Custom node types
   const nodeTypes = useMemo(() => ({ custom: CustomNode }), []);
 
-  // Initialize from store only once
+  // Initialize from store AND sync when store changes
   React.useEffect(() => {
-    if (storeNodes.length > 0) {
-      setNodes(storeNodes);
-    }
-    if (storeEdges.length > 0) {
-      setEdges(storeEdges);
-    }
-  }, []); // Empty dependency array - run only once on mount
+    console.log('Store nodes changed:', storeNodes.length);
+    setNodes(storeNodes);
+  }, [storeNodes, setNodes]);
+
+  React.useEffect(() => {
+    console.log('Store edges changed:', storeEdges.length);
+    setEdges(storeEdges);
+  }, [storeEdges, setEdges]);
 
   // Sync to store when nodes/edges change (but not from store updates)
   const syncToStore = React.useCallback(() => {
