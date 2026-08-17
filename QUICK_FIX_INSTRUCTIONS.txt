@@ -1,0 +1,54 @@
+🔧 QUICK FIX - Add Groq API Key to Vercel
+
+═══════════════════════════════════════════════════════════════
+
+✅ FIXED: Changed to "llama-3.1-8b-instant" (current working model)
+✅ DEPLOYED: Live at https://ai-system-design-builder.vercel.app
+✅ SUPER FAST: 8B model = even FASTER responses! ⚡
+
+❌ MISSING: API key in Vercel (that's why you see the error)
+
+═══════════════════════════════════════════════════════════════
+
+🔑 YOUR GROQ API KEY:
+YOUR_GROQ_API_KEY_HERE
+
+═══════════════════════════════════════════════════════════════
+
+📝 3 SIMPLE STEPS TO FIX:
+
+1. OPEN THIS LINK:
+   https://vercel.com/ajmul-s-projects/ai-system-design-builder/settings/environment-variables
+
+2. CLICK "Add New" and enter:
+   
+   Name:     NEXT_PUBLIC_GROQ_API_KEY
+   Value:    YOUR_GROQ_API_KEY_HERE
+   
+   ☑️ Check all 3 boxes (Production, Preview, Development)
+   
+   Click SAVE
+
+3. REDEPLOY:
+   - Click "Deployments" tab
+   - Click 3 dots (•••) on latest deployment
+   - Click "Redeploy"
+   - Wait 1 minute
+
+═══════════════════════════════════════════════════════════════
+
+⚡ WHY llama-3.1-8b-instant is GREAT:
+
+- ✅ Currently supported by Groq
+- ✅ LIGHTNING FAST (smaller = faster!)
+- ✅ Perfect for system design advice
+- ✅ 100% FREE
+- ✅ Sub-second responses
+
+═══════════════════════════════════════════════════════════════
+
+✅ AFTER ADDING KEY + REDEPLOYING:
+Visit https://ai-system-design-builder.vercel.app
+The AI Assistant will respond in MILLISECONDS! ⚡🚀
+
+═══════════════════════════════════════════════════════════════

@@ -1,0 +1,64 @@
+🚀 DEPLOY YOUR APP TO INTERNET - SUPER EASY METHOD
+================================================
+
+✅ Vercel is already installed on your computer!
+
+Just follow these 3 simple steps:
+
+STEP 1: Open a NEW Terminal/Command Prompt
+-------------------------------------------
+(Keep the development server running in the other terminal)
+
+
+STEP 2: Navigate to Your Project
+---------------------------------
+cd "c:\Users\AC\Downloads\AI-Powered-System-Design-App-Starter-File-main\AI-Powered-System-Design-App-Starter-File-main"
+
+
+STEP 3: Deploy with One Command
+--------------------------------
+vercel
+
+That's it! Just type "vercel" and press Enter.
+
+The Vercel CLI will:
+1. Ask you to login (it will open your browser)
+2. Ask a few simple questions (just press Enter to accept defaults)
+3. Deploy your app to the internet!
+4. Give you a live URL!
+
+⏱️ Total time: 2-3 minutes
+
+🌐 You'll get a URL like:
+https://ai-system-design-app-abc123.vercel.app
+
+Share that URL with anyone and they can use your app!
+
+================================================
+
+📝 IMPORTANT NOTES:
+
+1. First time? You'll need to:
+   - Create a Vercel account (free)
+   - Login through your browser
+   - Authorize Vercel CLI
+
+2. Add your Gemini API key:
+   After first deployment, go to:
+   https://vercel.com/dashboard
+   → Select your project
+   → Settings
+   → Environment Variables
+   → Add: NEXT_PUBLIC_GEMINI_API_KEY = your_api_key
+   → Redeploy
+
+3. Future updates:
+   - Make changes to your code
+   - Run "vercel" again
+   - Your app updates automatically!
+
+================================================
+
+🎉 THAT'S IT! Your app will be live on the internet!
+
+Questions? Check DEPLOYMENT_GUIDE.md for more details.

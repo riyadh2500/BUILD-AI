@@ -1,0 +1,62 @@
+🔑 ADD YOUR OPENAI API KEY TO VERCEL
+
+Your app is live at: https://ai-system-design-builder.vercel.app
+
+To enable the AI Assistant, follow these steps:
+
+════════════════════════════════════════════════════════════
+
+STEP 1: Go to Vercel Dashboard
+────────────────────────────────────────────────────────────
+Open: https://vercel.com/ajmul-s-projects/ai-system-design-builder/settings/environment-variables
+
+
+STEP 2: Add Environment Variable
+────────────────────────────────────────────────────────────
+1. Click "Add New" button
+2. Fill in the form:
+
+   Variable Name:
+   NEXT_PUBLIC_OPENAI_API_KEY
+
+   Value:
+   YOUR_OPENAI_API_KEY_HERE
+
+   Environments:
+   ✓ Production
+   ✓ Preview
+   ✓ Development
+
+3. Click "Save"
+
+
+STEP 3: Redeploy
+────────────────────────────────────────────────────────────
+1. Go to: https://vercel.com/ajmul-s-projects/ai-system-design-builder
+2. Click "Deployments" tab
+3. Find the latest deployment
+4. Click the three dots (•••) on the right
+5. Click "Redeploy"
+6. Wait ~1 minute for deployment to complete
+
+
+STEP 4: Test It!
+────────────────────────────────────────────────────────────
+1. Visit: https://ai-system-design-builder.vercel.app
+2. Click the AI Assistant button (purple robot icon, bottom right)
+3. Ask: "How to design a scalable ML system?"
+4. GPT-4 should respond! 🎉
+
+════════════════════════════════════════════════════════════
+
+✅ LOCAL TESTING (Working Now!)
+Your local version is already working with the API key!
+Open: http://localhost:3000
+The AI Assistant should work perfectly on localhost.
+
+════════════════════════════════════════════════════════════
+
+💡 QUICK LINK:
+https://vercel.com/ajmul-s-projects/ai-system-design-builder/settings/environment-variables
+
+That's it! Your AI System Design Builder will be powered by GPT-4! 🚀
