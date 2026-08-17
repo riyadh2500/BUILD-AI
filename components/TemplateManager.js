@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FiX, FiSearch, FiDownload, FiTrendingUp } from "react-icons/fi";
+import { FiX, FiSearch, FiTrendingUp } from "react-icons/fi";
 import useStore from "../store";
 import { v4 as uuidv4 } from "uuid";
 import { nodeTypes } from "../lib/node-types";
@@ -180,10 +180,7 @@ const TemplateManager = () => {
                       {template.description}
                     </p>
                     <div className="flex items-center justify-between text-xs text-gray-500">
-                      <div className="flex items-center space-x-1">
-                        <FiDownload className="w-3.5 h-3.5" />
-                        <span>{template.downloads.toLocaleString()} uses</span>
-                      </div>
+                      <span>{template.nodes.length} components</span>
                       <span className="text-blue-600 font-medium group-hover:text-blue-700">
                         Use Template →
                       </span>
