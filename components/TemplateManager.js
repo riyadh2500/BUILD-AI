@@ -9,12 +9,23 @@ const TemplateManager = () => {
   const { showTemplateManager, toggleTemplateManager, setNodes, setEdges, createProject } = useStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [allTemplates, setAllTemplates] = useState([]);
+  
+  // Generate templates on mount
+  React.useEffect(() => {
+    try {
+      const templates = generateAllTemplates();
+      console.log('Generated templates:', templates.length);
+      setAllTemplates(templates);
+    } catch (error) {
+      console.error('Error generating templates:', error);
+      setAllTemplates([]);
+    }
+  }, []);
   
   if (!showTemplateManager) {
     return null;
   }
-  
-  const allTemplates = generateAllTemplates();
   
   const filteredTemplates = allTemplates.filter(template => {
     const matchesSearch = template.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -115,7 +126,12 @@ const TemplateManager = () => {
 
         {/* Content */}
         <div className="flex-1 overflow-y-auto p-6">
-          {filteredTemplates.length === 0 ? (
+          {allTemplates.length === 0 ? (
+            <div className="text-center py-12">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+              <p className="text-gray-500">Loading templates...</p>
+            </div>
+          ) : filteredTemplates.length === 0 ? (
             <div className="text-center py-12">
               <p className="text-gray-500">No templates found matching your search.</p>
             </div>
