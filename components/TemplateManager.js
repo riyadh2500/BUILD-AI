@@ -6,9 +6,13 @@ import { nodeTypes } from "../lib/node-types";
 import { generateAllTemplates, templateCategories } from "../lib/template-generator";
 
 const TemplateManager = () => {
-  const { toggleTemplateManager, setNodes, setEdges, createProject } = useStore();
+  const { showTemplateManager, toggleTemplateManager, setNodes, setEdges, createProject } = useStore();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
+  
+  if (!showTemplateManager) {
+    return null;
+  }
   
   const allTemplates = generateAllTemplates();
   
